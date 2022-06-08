@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-def uniq_add(my_list=[]):
-    add = 0
-    for i in set(my_list):
-        add += i
-    return add   
+def search_replace(my_list, search, replace):
+    def s_r_elm(elm):
+        return (elm if elm != search else replace)
+    return list(map(s_r_elm, my_list))
